@@ -5,6 +5,8 @@
       <!-- Title -->
       <router-link to="/" class="toolbar-title">
         <v-toolbar-title class="headline text-uppercase">
+            <span>SED</span>
+            <span class="font-weight-light">Lab </span>
             <span>VALUE</span>
             <span class="font-weight-light">APP</span>
         </v-toolbar-title>
@@ -26,6 +28,14 @@
         </template>
         <span>No help available yet :(</span>
         </v-tooltip>
+        <v-btn
+          href="https://sedlab-catalog.netlify.app/"
+          target="_blank"
+          text
+        >
+          <span class="mr-2">SEDLab</span>
+          <v-icon>mdi-open-in-new</v-icon>
+        </v-btn>
       </v-toolbar-items>
     </v-app-bar>
 </template>
