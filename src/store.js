@@ -218,7 +218,7 @@ export default new Vuex.Store({
   actions: {
       loadProjects({commit}) {
           axios
-            .get('https://my-json-server.typicode.com/inigoalonso/visp-db/projects')
+            .get('https://my-json-server.typicode.com/sed-group/sedlab-valueapp/projects')
             .then(data => {
                 console.log(data.data)
                 let projects = data.data
