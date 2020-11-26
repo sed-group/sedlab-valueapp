@@ -1,0 +1,284 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "name": "VISP - Glue Gun",
+        "description": "A toy problem",
+        "architectures": [
+          {
+            "id": 1,
+            "name": "Glue Gun Wired"
+          },
+          {
+            "id": 2,
+            "name": "Glue Gun Wireless"
+          }
+        ],
+        "needs": [],
+        "stakeholders": [],
+        "valueCreationStrategies": []
+      },
+      {
+        "id": 2,
+        "name": "VISP - HUD",
+        "description": "Head-Up Display use case for VCG",
+        "architectures": [
+          {
+            "id": 1,
+            "name": "Volvo XC90 Sport",
+            "description": "Luxury SUV with a sporting edge"
+          }
+        ],
+        "needs": [
+          {
+            "id": 1,
+            "needName": "Do not intrude into the passenger space nor crush zones",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": [
+              "Clashes with steering wheel ride-down",
+              "Firewall intrusions",
+              "Unit deformability",
+              "Attachment position"
+            ],
+            "valueDrivers": ["Position (X mm, Y mm, Z mm)", "Volume (mm^3)"]
+          },
+          {
+            "id": 2,
+            "needName": "Fit in the space between steering column, cross car beam and instrument panel",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": ["Unit volume"],
+            "valueDrivers": ["Volume (mm^3)"]
+          },
+          {
+            "id": 3,
+            "needName": "Easy to replace",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": [
+              "Accessibility",
+              "Inspectability",
+              "Reparability",
+              "Maintenance complexity",
+              "Updatability"
+            ],
+            "valueDrivers": ["Flexibility", "Accesibility"]
+          },
+          {
+            "id": 4,
+            "needName": "Provide information to driver",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": [
+              "Image size",
+              "Field of View (FoV)",
+              "Eyebox size"
+            ],
+            "valueDrivers": ["Perceived quality"]
+          },
+          {
+            "id": 5,
+            "needName": "No image quality issues",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": [
+              "Reflections/Glare",
+              "Image contrast",
+              "Image sharpness",
+              "Windscreen optical parameters",
+              "Projector brightness",
+              "Attachment dampening"
+            ],
+            "valueDrivers": ["Perceived quality"]
+          },
+          {
+            "id": 6,
+            "needName": "Further position of virtual image",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": ["Projected View distance"],
+            "valueDrivers": ["Volume (mm^3)"]
+          },
+          {
+            "id": 7,
+            "needName": "Easy for drivers to adjust to their height",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": ["Eyebox position", "User height range"],
+            "valueDrivers": ["Perceived quality"]
+          },
+          {
+            "id": 8,
+            "needName": "Maintain windshield shape within brand design language",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": ["Optical path", "Windscreen design"],
+            "valueDrivers": ["Volume (mm^3)"]
+          },
+          {
+            "id": 9,
+            "needName": "Minimize energy waste",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": [
+              "Electricity consumption",
+              "Energy consumption",
+              "Drag"
+            ],
+            "valueDrivers": ["Energy (Wh)"]
+          },
+          {
+            "id": 10,
+            "needName": "Minimize noise",
+            "description": "",
+            "stakeholders": [],
+            "consequences": "",
+            "examples": "",
+            "valueDriversOld": ["Noise"],
+            "valueDrivers": ["Noise"]
+          }
+        ],
+        "stakeholders": [
+          {
+            "id": 1,
+            "name": "Person 1",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Principal Engineer Solidity (Squeak & Rattle)"
+          },
+          {
+            "id": 2,
+            "name": "Person 2",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Attribute Leader Ergonomics"
+          },
+          {
+            "id": 3,
+            "name": "Person 3",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Cockpit Integration (Blockleader)"
+          },
+          {
+            "id": 4,
+            "name": "Person 4",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Expert Studio Engineer"
+          },
+          {
+            "id": 5,
+            "name": "Person 5",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Product Owner"
+          },
+          {
+            "id": 6,
+            "name": "Person 6",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Safety Attribute Leader"
+          },
+          {
+            "id": 7,
+            "name": "Person 7",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Mech Integration"
+          },
+          {
+            "id": 8,
+            "name": "Person 8",
+            "organization": "VCG",
+            "type": "Internal",
+            "role": "Lead Engineer HUD"
+          }
+        ],
+        "valueCreationStrategies": [
+          {
+            "id": 1,
+            "name": "Without HUD",
+            "description": "Use the other information display areas",
+            "ranking": [8, 10, 9, 4, 5, 6, 7, 3, 2, 1],
+            "metrics": {
+              "flexibility": 0.5,
+              "volume": 0,
+              "quality": 0.3
+            }
+          },
+          {
+            "id": 2,
+            "name": "Current solution",
+            "description": "Maintain performance levels, without changing the current technology",
+            "ranking": [1, 4, 2, 8, 5, 7, 6, 3, 10, 9],
+            "metrics": {
+              "flexibility": 1,
+              "volume": 1,
+              "quality": 1
+            }
+          },
+          {
+            "id": 3,
+            "name": "Increase performance with current technology",
+            "description": "Increase the performance or functionality, but maintain the current technology",
+            "ranking": [1, 2, 3, 4, 8, 5, 7, 6, 10, 9],
+            "metrics": {
+              "flexibility": 0.8,
+              "volume": 1.2,
+              "quality": 1.2
+            }
+          },
+          {
+            "id": 4,
+            "name": "Increase performance with new technology",
+            "description": "Increase the performance or functionality, by using a new technology",
+            "ranking": [1, 2, 4, 8, 5, 7, 6, 3, 10, 9],
+            "metrics": {
+              "flexibility": 1.1,
+              "volume": 0.9,
+              "quality": 1.3
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "VISP - LF",
+        "description": "Lower Front use case for VGTT",
+        "architectures": [
+          {
+            "id": 1,
+            "name": "Lower Front Friday"
+          },
+          {
+            "id": 2,
+            "name": "Lower Front Monday"
+          }
+        ],
+        "needs": [],
+        "stakeholders": [],
+        "valueCreationStrategies": []
+      }
+    ]
+  }
